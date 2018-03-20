@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  test:
+  cron:
     container_name: test-cron
     build: .
 
