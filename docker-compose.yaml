@@ -1,9 +1,9 @@
 version: '2'
 
 services:
-  test:
+  cron:
     container_name: test-cron
-    build: .
+    build: ./build_cron
 
     #only commands with the prefix "CONTAINER_" prefix will be copied to the crontab
     environment:
@@ -12,3 +12,4 @@ services:
     # if you don't use the docker command you should remove the docker.sock from the container
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
